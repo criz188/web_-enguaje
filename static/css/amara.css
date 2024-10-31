@@ -1,0 +1,113 @@
+/* amara.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+pre {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Estilos para resaltar */
+.formal {
+    background-color: #d1e7dd; /* Verde claro */
+    color: #0f5132; /* Verde oscuro */
+    font-weight: bold;
+}
+
+.informal {
+    background-color: #fff3cd; /* Amarillo claro */
+    color: #856404; /* Amarillo oscuro */
+    font-weight: bold;
+}
+
+.groseria {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    font-weight: bold;
+}

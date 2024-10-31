@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/amara.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Clasificador de Lenguaje</title>
+</head>
+<body>
+    <header>
+        <h1>Clasificador de Lenguaje</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Sube un Documento de Texto</h2>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".txt" required>
+                <button type="submit">Subir Documento</button>
+            </form>
+        </section>
+
+        {% if porcentaje_formal is not none %}
+        <section>
+            <h2>Resultados del Análisis</h2>
+            <p>Porcentaje de lenguaje formal: {{ porcentaje_formal|default(0)|round(2) }}%</p>
+            <p>Porcentaje de lenguaje informal: {{ porcentaje_informal|default(0)|round(2) }}%</p>
+            <p>Porcentaje de groserías: {{ porcentaje_groserias|default(0)|round(2) }}%</p>
+            <h3>Texto Analizado:</h3>
+            <pre>{{ texto }}</pre>
+        </section>
+        {% endif %}
+    </main>
+</body>
+</html>
